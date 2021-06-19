@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.setting.SettingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/et_port"
+            android:id="@+id/et_host"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/host"/>
+
+        <EditText
+            app:layout_constraintTop_toTopOf="@id/et_host"
+            app:layout_constraintStart_toEndOf="@id/et_host"
+            app:layout_constraintEnd_toStartOf="@id/btn_save"
+            android:id="@+id/et_port"
+            android:inputType="number"
+            android:hint="@string/port"
+            android:maxLines="1"
+            android:minLines="1"
+            android:lines="1"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            app:layout_constraintTop_toTopOf="@id/et_host"
+            app:layout_constraintStart_toEndOf="@id/et_port"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/btn_save"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
